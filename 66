@@ -1,0 +1,27 @@
+#include<stdio.h>
+void main()
+{
+	int a[10];
+	int i, j, min, temp;
+	printf("请输入10个整数：\n");
+	for (i = 0;i < 10;i++)
+		scanf_s("%d", &a[i]);
+	for (i = 0;i < 10;i++)
+	{
+		min = i;
+		for (j = i + 1;j < 10;j++)
+			if (a[j] < a[min])
+				min = j;
+			if (min != i)
+			{
+				temp = a[min];
+				a[min] = a[i];
+				a[i] = temp;
+			}
+	}
+	printf("其按由小到大的顺序排序后为：\n");
+	for (i = 0;i < 10;i++)
+	{
+		printf("%d ", a[i]);
+	}
+}
