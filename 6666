@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+	float arr[10], x,y;
+	int i, j;
+	printf("请输入十个数据：\n");
+	for (i = 0;i < 10;i++)
+		scanf_s("%f", &arr[i]);
+	x = arr[0];
+	y = arr[0];
+	for (j = 1;j < 10;j++)
+	{
+		if (arr[j] > x)
+			x = arr[j];
+		if (arr[j] < y)
+			y = arr[j];
+	}
+	printf("最大的数是：%f\n", x);
+	printf("最小的数是：%f\n", y);
+}
